@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+{% block title %} BOGGLE TIME! {% endblock %}
+
+{% block content %}
+
+    <h1>It's Boggle Time!</h1>
+    <br>
+    <div id="timer">
+        <p>Click New Game to Start!</p>
+    </div>
+    <br>
+    <div id="game" class="container">
+        <table id="board" class="table table-warning">
+            {% for y in range(5) %}
+               
+                <tr>
+                    {% for x in range(5)%}
+                        <td class="text-center font-weight-bold " id="{{y}}-{{x}}" >
+                            {{board_game[y][x]}}
+                        </td>
+                    {% endfor %}
+                </tr>
+
+            {% endfor %}
+        </table>
+    <form action = "" >
+        <input type="text" name="word" placeholder="whale" id="word" >
+        <button id="submit-button" method="POST" class="btn btn-success">Submit Word</button>
+    </form>
+
+    <div id="score">
+        <p >Current Score: 0 | High Score: {{high_score}}</p>
+    </div>
+    <p>GUESSES</p>
+    <div id="guesses">
+    </div>
+    
+    <form action = "/begin" method="POST">
+        <button class="btn btn-info" px="md">New Game!</button>
+    </form>
+    <p class="font-italic">Number of Times Played: {{ session['count'] }} </p>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+#game {
+    width: 350px;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: orange;
+    padding: 20px;
+}
+/* #score{
+    background-color: white;
+} */
+
+body{
+    text-align: center;
+}
+div{
+    display:inline-block
+}

@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block title %} BOGGLE TIME! {% endblock %}
+
+{% block content %}
+
+    <h1>Let's Play Boggle!</h1>
+    <br>
+    <img src="https://pbs.twimg.com/profile_images/906247518459015168/b5fuOCTP.jpg" alt="boggle logo">
+    <form action = "/begin" method="POST">
+        <button>New Game!</button>
+    </form>
+
+{% endblock %}
